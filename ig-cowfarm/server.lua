@@ -25,15 +25,17 @@ AddEventHandler("ig-cowfarm:sell", function()
         if money >= maxmoney then
             xPlayer.kick("Cheater")
         else
-            local randomMoney = math.random(30,60)
+            local rewardAmount = 0
+            for i = 1, xPlayer.getInventoryItem("milk").count do
+                rewardAmount = rewardAmount + math.random(2, 5)
+            end
             if xPlayer.getInventoryItem("milk").count > 0 then
-                xPlayer.addMoney(cfg.price['pricemilk'])
-                xPlayer.removeInventoryItem("milk", 1)
+                xPlayer.addMoney(rewardAmount)
+                xPlayer.removeInventoryItem("milk", xPlayer.getInventoryItem("milk").count)
             else
                 TriggerClientEvent('esx:showNotification', source, cfg.translation['nomilk'])
 
             end
         end
     end
-end)
 
