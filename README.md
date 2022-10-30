@@ -6,4 +6,4 @@
 [Qtarget](https://github.com/overextended/qtarget)
 
 ## Preview
-Video Preview https://i.imgur.com/knuHPtY.mp4
+Video Preview https://streamable.com/lle841
