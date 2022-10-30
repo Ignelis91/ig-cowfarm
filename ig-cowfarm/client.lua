@@ -38,26 +38,11 @@ CreateThread(function()
                 BeginTextCommandSetBlipName('blip')
                 EndTextCommandSetBlipName(blip)
             end
-            if sellmilk == nil then
-                sellmilk = AddBlipForCoord(cfg.blip['sellmilk'])
-                AddTextEntry('blip', cfg.blip['sellmilkname'])
-                SetBlipSprite(sellmilk, 473)
-                SetBlipColour(sellmilk, 37)
-                SetBlipDisplay(sellmilk, 4)
-                SetBlipScale(sellmilk, 1.0)
-                SetBlipAsShortRange(sellmilk, true)
-                BeginTextCommandSetBlipName('blip')
-                EndTextCommandSetBlipName(sellmilk)
-            end
 
         else
             if blip ~= nil then
                 RemoveBlip(blip)
                 blip = nil
-            end
-            if sellmilk ~= nil then
-                RemoveBlip(sellmilk)
-                sellmilk = nil
             end
 
         end
@@ -122,6 +107,11 @@ ShowFloatingHelpNotification = function(msg, pos)
     EndTextCommandDisplayHelp(2, false, false, -1)
 end
 
+RegisterNetEvent("ig-cowfarm:sellcl")
+AddEventHandler("ig-cowfarm:sellcl", function()
+	TriggerServerEvent("ig-cowfarm:sell")
+end)
+
 exports.qtarget:AddTargetModel({"a_c_cow"}, {
 	options = {
 		{
@@ -134,15 +124,17 @@ exports.qtarget:AddTargetModel({"a_c_cow"}, {
 	distance = 2
 })
 
--- IN TEST
-
-zastavitkravu = function()
-local player = PlayerPedId()
-	if player then
-		GetClosestPed(GetEntityCoords(PlayerPedId()), 5, true, true, true, true, 28)
-		print("funguje")
-	end
-end
+exports.qtarget:AddTargetModel({"a_m_m_farmer_01"}, {
+	options = {
+		{
+			event = "ig-cowfarm:sellcl",
+			icon = "fa-solid fa-dollar-sign",
+			label = cfg.translation['sellmilk'],
+			num = 1
+		},
+	},
+	distance = 2
+})
 
 local npc = {}
 local npcThreadas = 3000
