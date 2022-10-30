@@ -1,6 +1,8 @@
 # ig-cowfarm
 
-Requires
+## Requires
 [rprogress](https://github.com/Mobius1/rprogress)
 
-![Video](https://i.imgur.com/knuHPtY.mp4)
+
+## Preview
+Video Preview https://i.imgur.com/knuHPtY.mp4
