@@ -24,8 +24,8 @@ cfg = {
         ['limit'] = "Jus Neturite Vietos Inventoryje"
     },
 
-    money = {
-        ['permilk'] = "2"
+    price = {
+        ['pricemilk'] = "2"
     },
 
     karves = {
