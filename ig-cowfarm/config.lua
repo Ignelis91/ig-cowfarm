@@ -4,8 +4,6 @@ cfg = {
     blip = {
         ['blipcow'] = vector3(2458.1333, 4756.3159, 34.3039),
         ['blipcowname'] = "Karviu Ferma",
-        ['sellmilk'] = vector3(1960.9851, 3754.2280, 32.2506),
-        ['sellmilkname'] = "Pieno Pardavimas",
     },
 
     job = {
@@ -17,6 +15,7 @@ cfg = {
     },
 
     translation = {
+        ['sellmilk'] = "Priduoti Piena",
         ['sellmilk'] = "Parduoti Piena [E]",
         ['nomilk'] = "Jus Neturite Pieno",
         ['tryagain'] = "Bandyk Iš Naujo",
@@ -62,6 +61,11 @@ cfg = {
         {
             pos = {x = 2441.3938, y = 4792.7886, z = 33.6690, h = 266.7509}, -- 2441.3938, 4792.7886, 34.6690, 266.7509
             model = 'a_c_cow',
+            spawned = false,
+        },
+        {
+            pos = {x = 2030.3314, y = 4980.5737, z = 41.0984, h = 310.3210}, -- 2441.3938, 4792.7886, 34.6690, 266.7509
+            model = 'a_m_m_farmer_01',
             spawned = false,
         },
 }
