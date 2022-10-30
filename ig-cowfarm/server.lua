@@ -27,7 +27,7 @@ AddEventHandler("ig-cowfarm:sell", function()
         else
             local randomMoney = math.random(30,60)
             if xPlayer.getInventoryItem("milk").count > 0 then
-                xPlayer.addMoney(cfg.money['permilk'])
+                xPlayer.addMoney(cfg.price['pricemilk'])
                 xPlayer.removeInventoryItem("milk", 1)
             else
                 TriggerClientEvent('esx:showNotification', source, cfg.translation['nomilk'])
