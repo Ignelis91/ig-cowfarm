@@ -4,6 +4,8 @@ cfg = {
     blip = {
         ['blipcow'] = vector3(2458.1333, 4756.3159, 34.3039),
         ['blipcowname'] = "Cow Farm",
+        ['sellmilk'] = vector3(2030.3314, 4980.5737, 41.0984),
+        ['sellmilkname'] = "Milk Buyer",
     },
 
     job = {
