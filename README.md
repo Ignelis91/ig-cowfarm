@@ -6,4 +6,4 @@
 [Qtarget](https://github.com/overextended/qtarget)
 
 ## Preview
-Video Preview Soon
+Video https://streamable.com/mq32wm
