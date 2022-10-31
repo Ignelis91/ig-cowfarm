@@ -3,9 +3,9 @@ INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES
 ;
 
 INSERT INTO `jobs` (name, label) VALUES
-	('farmer', 'Melžejas')
+	('farmer', 'Milkman')
 ;
 
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('farmer', 0, 'farmer', 'Darbuotojas', 0, '{}', '{}')
+	('farmer', 0, 'farmer', 'Worker', 0, '{}', '{}')
 ;
