@@ -21,6 +21,15 @@ cfg = {
         ['getmilk'] = "Get Milk",
         ['limit'] = "You do not have a space in the inventory"
     },
+    
+        --translation = { -- Lithuanian
+        --['sellmilk'] = "Priduoti Piena",
+        --['nomilk'] = "Jus Neturite Pieno",
+        --['tryagain'] = "Bandyk Iš Naujo",
+        --['getmilk'] = "Melžti Karve",
+        --['bucket'] = "Jus Neturite Kibiro",
+        --['limit'] = "Jus Neturite Vietos Inventoryje",
+    --},
 
     price = {
         ['pricemilk'] = "2"
