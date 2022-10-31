@@ -3,7 +3,7 @@ cfg = {
 
     blip = {
         ['blipcow'] = vector3(2458.1333, 4756.3159, 34.3039),
-        ['blipcowname'] = "Karviu Ferma",
+        ['blipcowname'] = "Cow Farm",
     },
 
     job = {
@@ -15,12 +15,11 @@ cfg = {
     },
 
     translation = {
-        ['sellmilk'] = "Priduoti Piena",
-        ['sellmilk'] = "Parduoti Piena [E]",
-        ['nomilk'] = "Jus Neturite Pieno",
-        ['tryagain'] = "Bandyk Iš Naujo",
-        ['getmilk'] = "Melžti Karve",
-        ['limit'] = "Jus Neturite Vietos Inventoryje"
+        ['sellmilk'] = "Sell Milk",
+        ['nomilk'] = "You have no milk",
+        ['tryagain'] = "Try Again",
+        ['getmilk'] = "Get Milk",
+        ['limit'] = "You do not have a space in the inventory"
     },
 
     price = {
