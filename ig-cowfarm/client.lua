@@ -38,11 +38,26 @@ CreateThread(function()
                 BeginTextCommandSetBlipName('blip')
                 EndTextCommandSetBlipName(blip)
             end
+	       if sellmilk == nil then
+                sellmilk = AddBlipForCoord(cfg.blip['sellmilk'])
+                AddTextEntry('blip', cfg.blip['sellmilkname'])
+                SetBlipSprite(sellmilk, 293)
+                SetBlipColour(sellmilk, 2)
+                SetBlipDisplay(sellmilk, 4)
+                SetBlipScale(sellmilk, 1.0)
+                SetBlipAsShortRange(sellmilk, true)
+                BeginTextCommandSetBlipName('blip')
+                EndTextCommandSetBlipName(sellmilk)
+            end
 
         else
             if blip ~= nil then
                 RemoveBlip(blip)
                 blip = nil
+            end
+		if sellmilk ~= nil then
+                RemoveBlip(sellmilk)
+                sellmilk = nil
             end
 
         end
