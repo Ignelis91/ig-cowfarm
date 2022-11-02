@@ -104,6 +104,7 @@ exports.ox_target:addModel("a_c_cow", {{
             icon = 'fa-solid fa-cow',
             label = cfg.translation['getmilk'],
             groups = cfg.job['job'],
+	    distance = 2,
 }})
 
 exports.ox_target:addModel("a_m_m_farmer_01", {{
@@ -111,6 +112,7 @@ exports.ox_target:addModel("a_m_m_farmer_01", {{
 	icon = 'fa-solid fa-dollar-sign',
 	label = cfg.translation['sellmilk'],
 	groups = cfg.job['job'],
+	distance = 2,
 }})
 
 
