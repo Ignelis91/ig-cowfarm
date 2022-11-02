@@ -74,7 +74,15 @@ AddEventHandler("ig-cowfarm:milk", function()
 	if JobStarted == false then
 	JobStarted = true
 	TaskStartScenarioInPlace(playerPed, 'PROP_HUMAN_BUM_BIN', 5000, true)
-	exports.rprogress:Start('Melžiate Karvė', 5000)
+	if lib.progressCircle({
+        duration = 5000,
+        position = 'bottom',
+        useWhileDead = false,
+        canCancel = true,
+        disable = {
+            car = true,
+        },
+    }) then end
 	ClearPedTasks(playerPed)
 	TriggerServerEvent("ig-cowfarm:getmilk")
 	Citizen.Wait(500)
@@ -90,29 +98,21 @@ AddEventHandler("ig-cowfarm:sellcl", function()
 	TriggerServerEvent("ig-cowfarm:sell")
 end)
 
-exports.qtarget:AddTargetModel({"a_c_cow"}, {
-	options = {
-		{
-			event = "ig-cowfarm:milk",
-			icon = "fa-solid fa-cow",
-			label = cfg.translation['getmilk'],
-			num = 1
-		},
-	},
-	distance = 2
-})
 
-exports.qtarget:AddTargetModel({"a_m_m_farmer_01"}, {
-	options = {
-		{
-			event = "ig-cowfarm:sellcl",
-			icon = "fa-solid fa-dollar-sign",
-			label = cfg.translation['sellmilk'],
-			num = 1
-		},
-	},
-	distance = 2
-})
+exports.ox_target:addModel("a_c_cow", {{
+            event = 'ig-cowfarm:milk',
+            icon = 'fa-solid fa-cow',
+            label = cfg.translation['getmilk'],
+            groups = cfg.job['job'],
+}})
+
+exports.ox_target:addModel("a_m_m_farmer_01", {{
+	event = 'ig-cowfarm:sellcl',
+	icon = 'fa-solid fa-dollar-sign',
+	label = cfg.translation['sellmilk'],
+	groups = cfg.job['job'],
+}})
+
 
 local npc = {}
 local npcThreadas = 3000
