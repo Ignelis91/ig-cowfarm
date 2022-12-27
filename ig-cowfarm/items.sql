@@ -1,7 +1,3 @@
-INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES 
-    ('milk', 'Milk', 1, 0, 1)
-;
-
 INSERT INTO `jobs` (name, label) VALUES
 	('farmer', 'Melžejas')
 ;
